@@ -1,0 +1,144 @@
+/* Reset do CSS */
+@import "./normalize.css";
+
+:root {
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+
+  --font-size-small: 12px;
+  --font-size-base: 16px;
+  --font-size-lg: 24px;
+
+  --color-primary: #ef4723; /* Passa parcialmente no teste WCAG AA com branco. Contraste de 3.75:1 */
+  --color-white: white;
+  --color-gray: #666;
+
+  --border-radius: 4px;
+}
+
+#app {
+  max-width: 504px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+  font-family: "Helvetica", "Verdana", sans-serif;
+  font-weight: normal;
+}
+
+.form-stepper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-stepper__step-indicator {
+  font-size: var(--font-size-base);
+}
+
+.form-stepper__current-step {
+  color: var(--color-primary);
+}
+
+.form-stepper__button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-sm);
+  gap: var(--spacing-md);
+}
+
+.form-stepper__button {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  width: 100%;
+}
+
+.form-stepper__button:hover {
+  opacity: 0.9;
+}
+
+.form-stepper__button--outline {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.form-stepper__button--outline:hover {
+  border: 1px solid black;
+}
+
+.form-stepper__button--submit {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+}
+
+.step-email,
+.step-pf-details,
+.step-pj-details,
+.step-password,
+.step-pf-review,
+.step-pj-review {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.step-email__title,
+.step-pf-details__title,
+.step-pj-details__title,
+.step-password__title,
+.step-pf-review__title,
+.step-pj-review__title {
+  font-size: var(--font-size-lg);
+}
+
+.step-email__form-field label,
+.step-pf-details__form-field label,
+.step-pj-details__form-field label,
+.step-password__form-field label,
+.step-pf-review__form-field label,
+.step-pj-review__form-field label {
+  display: block;
+  font-weight: normal;
+  margin-bottom: var(--spacing-xs);
+}
+
+.step-email__form-field input,
+.step-pf-details__form-field input,
+.step-pj-details__form-field input,
+.step-password__form-field input,
+.step-pf-review__form-field input,
+.step-pj-review__form-field input {
+  width: 100%;
+  padding: var(--spacing-xs);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+}
+
+.step-email__radio-group {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.step-email__radio-group-item {
+  display: inline;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  gap: var(--spacing-xs);
+}
+
+.step-password__title {
+  margin-bottom: var(--spacing-sm);
+}
+
+.step-pf-details__info,
+.step-pf-review__info {
+  font-size: var(--font-size-small);
+  color: var(--color-gray);
+  margin-top: var(--spacing-xs);
+  text-align: right;
+}
